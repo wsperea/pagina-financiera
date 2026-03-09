@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor padre centrado */
+.wrapper {
+    position: relative;
+    width: 340px;
+}
+
+/* LOGIN y REGISTRO apilados */
+#loginSection, #registroSection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+/* LOGIN se oculta */
+#loginSection.hidden {
+    transform: translateY(-30px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* REGISTRO inicialmente invisible */
+#registroSection {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(30px);
+}
+
+/* REGISTRO visible */
+#registroSection.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Contenido de las secciones */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    background: #2ecc71;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo-text span {
+    display: block;
+    font-weight: normal;
+}
+
+/* Titulos */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Botones */
+button {
+    width: 100%;
+    background: #1f8f3a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #18742e;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+/* Enlace de registro */
+.register {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register a {
+    color: #1f8f3a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Imagen */
+.image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+}
+
+/* Back */
+#volverLogin {
+    padding-top: 10px;
+    color: #1f8f3a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#volverLogin:hover {
+    color: #16a34a;
+    transform: translateY(-2px);
+}

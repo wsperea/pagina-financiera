@@ -1,0 +1,22 @@
+USE finanzas;
+INSERT INTO categorias VALUES
+(1,'Salario','Ingreso','#4CAF50'),
+(2,'Freelance','Ingreso','#2ECC71'),
+(3,'Comida','Gasto','#E74C3C'),
+(4,'Transporte','Gasto','#3498DB'),
+(5,'Entretenimiento','Gasto','#9B59B6'),
+(6,'Salud','Gasto','#1ABC9C'),
+(7,'Educacion','Gasto','#F1C40F'),
+(8,'Ropa','Gasto','#E67E22'),
+(9,'Ahorro','Ingreso','#16A085'),
+(10,'Regalos','Gasto','#D35400'),
+(11,'Servicios','Gasto','#34495E'),
+(12,'Internet','Gasto','#2980B9'),
+(13,'Telefono','Gasto','#8E44AD'),
+(14,'Viajes','Gasto','#C0392B'),
+(15,'Inversion','Ingreso','#27AE60'),
+(16,'Mascotas','Gasto','#7F8C8D'),
+(17,'Hogar','Gasto','#95A5A6'),
+(18,'Seguro','Gasto','#2C3E50'),
+(19,'Bonificacion','Ingreso','#00BCD4'),
+(20,'Otros','Gasto','#BDC3C7');
