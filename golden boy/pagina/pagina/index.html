@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Página Principal</title>
+    <link rel="stylesheet" href="diseños/stilo.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">🐷 <span>Finanzas <b>Personales</b></span></div>
+            <nav class="menu">
+                <a href="" class="active">Página Principal</a>
+                <a href="gastos_ingresos.html">Gastos e Ingresos</a>
+                <a href="metas.html">Metas</a>
+            </nav>
+            <div class="user-profile">
+                <br>
+                <div class="info"><b>Steven</b><br>Estudiante</div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Página Principal</h1>
+                <div class="actions">
+                    <button class="btn-new">+ Nuevo Registro</button>
+                    <span class="notif">🔔</span>
+                    <span class="user-icon">👤</span>
+                </div>
+            </header>
+
+            <section class="welcome-banner">
+                <div class="welcome-text">
+                    <h2>¡Bienvenido de nuevo, Steven!</h2>
+                    <p>Esto es un resumen de tus finanzas personales.</p>
+                </div>
+                <div class="welcome-illustration">👨‍💻💰</div>
+            </section>
+
+            <section class="stat-cards">
+                <div class="card">
+                    <p>Saldo Actual</p>
+                    <h3>$1,500</h3>
+                    <span class="sub-text positive">+$2,050 este mes</span>
+                </div>
+                <div class="card">
+                    <p>Gastos del Mes</p>
+                    <h3 class="negative">-$1,800</h3>
+                    <span class="sub-text negative">↓ 24.6%</span>
+                </div>
+                <div class="card">
+                    <p>Ingresos del Mes</p>
+                    <h3 class="positive">+$3,300</h3>
+                    <span class="sub-text positive">↑ 18.5%</span>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <section class="goals-section">
+                    <div class="section-header">
+                        <h4>Mis Metas de Ahorro</h4>
+                        <span>...</span>
+                    </div>
+                    <p class="subtitle">Avanza y alcanza tus objetivos financieros</p>
+                    <div id="goals-list">
+                        </div>
+                </section>
+
+                <section class="recent-list">
+                    <div class="section-header">
+                        <h4>Gastos e Ingresos Recientes</h4>
+                        <select><option>Abril 2024</option></select>
+                    </div>
+                    <div id="recent-items">
+                        </div>
+                    <button class="btn-view-all">Ver Todos</button>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Datos para Metas
+        const goals = [
+            { title: 'Comprar Laptop', current: 750, total: 1000, color: '#4fd1c5' },
+            { title: 'Viaje a la Playa', current: 400, total: 1000, color: '#63b3ed' },
+            { title: 'Fondo de Emergencia', current: 900, total: 1000, color: '#f687b3' }
+        ];
+
+        const goalsContainer = document.getElementById('goals-list');
+        goals.forEach(goal => {
+            const percent = (goal.current / goal.total) * 100;
+            goalsContainer.innerHTML += `
+                <div class="goal-item">
+                    <div class="goal-info">
+                        <span>${goal.title}</span>
+                        <span>$${goal.current} / ${goal.total}</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${percent}%; background: ${goal.color}"></div>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
